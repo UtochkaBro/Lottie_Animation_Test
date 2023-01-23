@@ -1,10 +1,10 @@
 package com.example.lottie_animation_test
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,8 +13,9 @@ class MainActivity : AppCompatActivity() {
 
         val animationPurpleBro = findViewById<LottieAnimationView>(R.id.purple_bro_id)
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        GlobalScope.launch {
             animationPurpleBro.playAnimation()
-        }, 2000)
+        }
+
     }
 }
