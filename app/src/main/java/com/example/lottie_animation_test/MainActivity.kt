@@ -7,7 +7,9 @@ import com.airbnb.lottie.LottieAnimationView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,12 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         GlobalScope.launch {
             animationPurpleBro.playAnimation()
-        }
 
-        animationButton.setOnClickListener {
-            animationButton.speed=0.8f
-            animationButton.playAnimation()
+            animationButton.setOnClickListener {
+                animationButton.speed=0.8f
+                animationButton.scale=0.5f
+                animationButton.playAnimation()
+            }
         }
-
     }
 }
