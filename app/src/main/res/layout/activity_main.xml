@@ -10,15 +10,28 @@
         android:id="@+id/purple_bro_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:lottie_rawRes="@raw/purple_bro_animation"
-        app:lottie_autoPlay="false"
-        app:lottie_loop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/button_animate_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/purple_bro_animation"
         tools:ignore="MissingConstraints" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/button_animate_id"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_rawRes="@raw/button_animate"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+ />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
